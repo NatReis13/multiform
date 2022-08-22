@@ -1,16 +1,17 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { FormStep1 } from "./pages/FormStep1/index"
-import { FormStep2 } from "./pages/FormStep2/index"
-import { FormStep3 } from "./pages/FormStep3/index"
+import { FormStep1 } from "./pages/FormStep1/index";
+import { FormStep2 } from "./pages/FormStep2/index";
+import { FormStep3 } from "./pages/FormStep3/index";
 
 export const Router = () => {
-return (
+  return (
     <BrowserRouter>
-    <Route path="/" element={<FormStep1/>} />
-    <Route path="/step2" element={<FormStep2/>}/>
-    <Route path="/step3" element={<FormStep3/>}/>
+      <Routes>
+        <Route path="/" element={<FormStep1 />} />
+        <Route path="/step2" element={<FormStep2 />} />
+        <Route path="/step3" element={<FormStep3 />} />
+      </Routes>
     </BrowserRouter>
-)
-
-}
+  );
+};
