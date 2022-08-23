@@ -46,4 +46,15 @@ button {
         cursor: pointer;
         margin-top: 30px;
     }
+    .backbutton{
+        font-size: 14px;
+        text-decoration: none;
+        margin-right: 10px;
+        padding: 20px 40px;
+        color: #FFF;
+       background-color: #00994d;
+       border-radius: 30px;
+       font-weight: bold;
+      
+    }   
 `;

@@ -50,7 +50,7 @@ export const FormStep1 = () => {
         </label>
 
         <button onClick={handleNextStep}>Próximo</button>
-        {state.currentStep}
+       
       </C.Container>
     </Themer>
   );
