@@ -7,14 +7,14 @@ import { SelectOption } from "../../components/SelectOption";
 
 export const FormStep2 = () => {
   const navigate = useNavigate();
-  const { state, dispatch } = useForm(); //ler e execultar o nome na proxima page
+  const { state, dispatch} = useForm(); //ler e execultar o nome na proxima page
 
   useEffect(() => {
     dispatch({
       type: FormActions.setCurrentStep,
       payload: 2,
     }); // atualizar e mostrar o passo que esta
-  });
+  },[]);
 
   const handleNextStep = () => {
     if (state.name !== "") {
@@ -24,11 +24,13 @@ export const FormStep2 = () => {
     }
   };
 
-  const setLevel= (level: number) => {
+  const setLevel = (level: number) => {
     dispatch({
         type: FormActions.setLevel,
         payload: level
-    });// troca level selecionado e borda verde
+    });
+    
+    // troca level selecionado e borda verde
     
   }
 
@@ -46,7 +48,7 @@ export const FormStep2 = () => {
           description="Comecei a programar há menos de 2 anos"
           icon="😅"
           selected={state.level === 0}
-          onClick={setLevel(0)}
+          onClick={() => {setLevel(0)}}
         />
 
         <SelectOption
@@ -54,7 +56,7 @@ export const FormStep2 = () => {
           description="Já programo há 2 anos ou mais"
           icon="😎"
           selected={state.level === 1}
-          onClick={setLevel(1)}
+          onClick={() => {setLevel(1)}}
         />
 
         <button onClick={handleNextStep}>Próximo</button>

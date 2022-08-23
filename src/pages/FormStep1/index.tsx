@@ -13,7 +13,7 @@ export const FormStep1 = () => {
       type: FormActions.setCurrentStep,
       payload: 1,
     }); // atualizar e mostrar o passo que esta
-  });
+  },[]);
 
   const handleNextStep = () => {
     if (state.name !== "") {
