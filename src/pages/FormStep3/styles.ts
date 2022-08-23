@@ -14,7 +14,7 @@ h1{
 hr{
     height: 1px;
     border: 0;
-    background-color: #16195C;
+    background-color: #010332;
     margin: 30px 0;
 }
 label{
@@ -32,7 +32,7 @@ label{
         color: #FFF;
         outline: 0;
         font-size: 15px;
-        background-color: #02044A;
+        background-color: #010332;
     }   
 }
 

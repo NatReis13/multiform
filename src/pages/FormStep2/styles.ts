@@ -31,7 +31,7 @@ label{
         color: #FFF;
         outline: 0;
         font-size: 15px;
-        background-color: #02044A;
+        background-color: #010332;
     }   
 }
 
