@@ -29,6 +29,7 @@ export const FormStep2 = () => {
         type: FormActions.setLevel,
         payload: level
     });// troca level selecionado e borda verde
+    
   }
 
   return (
