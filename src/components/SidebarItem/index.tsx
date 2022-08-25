@@ -3,6 +3,7 @@ import * as C from "./styles";
 import { ReactComponent as ProfileIcon } from "../../svgs/profile.svg"
 import { ReactComponent as BookIcon } from "../../svgs/book.svg"
 import { ReactComponent as MailIcon } from "../../svgs/mail.svg"
+import { ReactComponent as ConcluIcon } from "../../svgs/verificar.svg"
 //inportando ReactComponent e nomeando consigo fazer edição no svg
 
 type Props = {
@@ -32,6 +33,9 @@ export const SidebarItem = ({ title, description, icon, path, active }: Props) =
            }
            {icon === 'mail' && 
             <MailIcon fill="white" width={50} height={35}/>
+           }
+           {icon === 'conclu' && 
+            <ConcluIcon fill="white" width={40} height={45} />
            }
         </C.IconArea>
         <C.Point active={active}></C.Point>

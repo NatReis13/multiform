@@ -4,7 +4,6 @@ import { useForm, FormActions } from "../../contexts/FormContext";
 import { Themer } from "../../components/Theme";
 import { ChangeEvent, useEffect } from "react";
 
-
 export const FormStep3 = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useForm(); //ler e execultar o nome na proxima page
@@ -21,13 +20,12 @@ export const FormStep3 = () => {
   }, []);
 
   const handleNextStep = () => {
-   if(state.email !== '' && state.github !== ''){
-    console.log(state); //tem que enviar para um servidor aqui
-   } else{
-    alert("Preecha os dados!");
-   }
+    if (state.name !== "") {
+      navigate("/step4"); //só passa de pagina se estiver diferente de vazio
+    } else {
+      alert("❌ Preencha os dados.");
+    }
   };
-
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: FormActions.setEmail,
@@ -42,11 +40,10 @@ export const FormStep3 = () => {
     }); // mandar o valor que esta no campo digitado
   };
 
-
   return (
     <Themer>
       <C.Container>
-        <p>Passo 3/3 📃</p>
+        <p>Passo 3/4 📃</p>
         <h1>Legal {state.name}, onde te achamos?</h1>
         <p>Preencha com seus contatos.</p>
 
@@ -70,9 +67,10 @@ export const FormStep3 = () => {
           />
         </label>
 
-        <Link to="/step2" className="backbutton">Voltar</Link>
+        <Link to="/step2" className="backbutton">
+          Voltar
+        </Link>
         <button onClick={handleNextStep}>Finalizar Cadastro</button>
-       
       </C.Container>
     </Themer>
   );

@@ -41,6 +41,13 @@ export const Themer = ({ children }: Props) => {
               path="/step3"
               active={state.currentStep === 3}
             />
+             <SidebarItem
+              title="Concluido"
+              description=""
+              icon="conclu"
+              path=""
+              active={state.currentStep === 4}
+            />
           </C.Sidebar>
           <C.Page>{children}</C.Page>
         </C.Steps>
